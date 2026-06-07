@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapid-RAG - DataSpeak's Home</title>
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/rapid-rag.css">
+  <script defer src="/assets/rapid-rag.js"></script>
+</head>
+<body class="page static-site">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/DataSpeak-logo.svg" alt="DataSpeak Logo" class="logo-image">
+          <span class="logo-text">DataSpeak Inc.</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+<li class="menu-item"><a href="/products/lightning-ai/">Pliops</a></li>
+<li class="menu-item"><a href="/products/agent-madang/">Agent Madang</a></li>
+<li class="menu-item"><a href="/products/sql-genius/">SQL Genius</a></li>
+<li class="menu-item"><a href="/products/rapid-rag/">Rapid-RAG</a></li>
+<li class="menu-item"><a href="/contact-us/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<div class="rapid-rag-page">
+    <!-- Hero Section -->
+    <section class="rr-hero">
+        <div class="container">
+            <h1>Rapid-RAG</h1>
+            <p class="hero-tagline">차세대 엔터프라이즈 RAG 솔루션<br>KV Cache Offload와 Vector Index Cache로 2배 이상의 성능 향상</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-value">2x</span>
+                    <span class="stat-label">응답 속도 향상</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">&lt;1ms</span>
+                    <span class="stat-label">벡터 검색 시간</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">10B+</span>
+                    <span class="stat-label">벡터 처리 규모</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">70%</span>
+                    <span class="stat-label">비용 절감</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="/contact-us/" class="btn-primary">데모 요청</a>
+                <a href="#technology" class="btn-secondary">자세히 알아보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="rr-technology" id="technology">
+        <div class="container">
+            <h2>핵심 기술</h2>
+            <p class="section-subtitle">Pliops LightningAI의 혁신적인 기술로 RAG 성능을 극대화합니다</p>
+
+            <div class="technology-grid">
+                <!-- KV Cache Offload -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <h3>KV Cache Offload 기술</h3>
+                    <p class="tech-description">
+                        GPU 메모리 제약을 해결하고 LLM 추론 성능을 혁신적으로 개선하는 핵심 기술
+                    </p>
+                    <ul class="tech-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>GPU 메모리 제약 해결</strong>
+                                <p>Key-Value 데이터를 고속 스토리지로 오프로드하여 GPU 메모리 부담 감소</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>2배 이상의 응답 속도 향상</strong>
+                                <p>하드웨어 가속을 통한 초고속 KV 캐시 액세스로 추론 속도 극대화</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>확장 가능한 장기 메모리</strong>
+                                <p>컨텍스트를 한 번만 처리하여 재사용하는 효율적인 메모리 구조</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>비용 효율적인 LLM 추론</strong>
+                                <p>GPU 사용량 최소화로 운영 비용 70% 절감 가능</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tech-badge">
+                        <i class="fas fa-award"></i>
+                        NVIDIA Dynamo 통합
+                    </div>
+                </div>
+
+                <!-- Vector Index Cache -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Vector Index Cache 가속화</h3>
+                    <p class="tech-description">
+                        Zilliz와의 협업으로 구현된 수십억 규모의 초고속 벡터 검색 기술
+                    </p>
+                    <ul class="tech-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>수십억 규모 벡터 검색</strong>
+                                <p>Zilliz Milvus와 통합하여 10B+ 벡터를 밀리초 내에 검색</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>스토리지 수준 비용, 메모리 수준 성능</strong>
+                                <p>Flash 스토리지 가격으로 메모리급 검색 성능 제공</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>이중 티어 아키텍처</strong>
+                                <p>Flash와 KV Mapping 추상화 레이어로 효율적인 캐싱 및 검색</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>하드웨어 가속 검색</strong>
+                                <p>GPU 가속 aNN 알고리즘으로 실시간 검색 성능 보장</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tech-badge">
+                        <i class="fas fa-award"></i>
+                        Zilliz 협업 솔루션
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Integration -->
+            <div class="tech-integration">
+                <div class="integration-content">
+                    <h3><i class="fas fa-link"></i> 통합 기술 시너지</h3>
+                    <p>KV Cache Offload와 Vector Index Cache가 결합되어 완벽한 RAG 솔루션을 제공합니다</p>
+                    <div class="integration-flow">
+                        <div class="flow-step">
+                            <div class="flow-icon"><i class="fas fa-database"></i></div>
+                            <div class="flow-label">데이터 수집</div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="flow-label">벡터 인덱싱</div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-icon"><i class="fas fa-search"></i></div>
+                            <div class="flow-label">초고속 검색</div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-icon"><i class="fas fa-memory"></i></div>
+                            <div class="flow-label">KV 캐시 처리</div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-icon"><i class="fas fa-robot"></i></div>
+                            <div class="flow-label">AI 응답 생성</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="rr-benefits" id="benefits">
+        <div class="container">
+            <h2>솔루션 장점</h2>
+            <p class="section-subtitle">Rapid-RAG가 제공하는 차별화된 가치</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>초고속 검색</h3>
+                    <p>밀리초 단위의 벡터 검색으로 실시간 응답 구현. 사용자 경험을 혁신적으로 개선합니다.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-value">&lt;1ms</span>
+                        <span class="metric-label">검색 응답 시간</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>비용 효율성</h3>
+                    <p>GPU 메모리 사용량을 최소화하여 인프라 비용을 대폭 절감. TCO를 70% 이상 감소시킵니다.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-value">70%</span>
+                        <span class="metric-label">비용 절감</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3>무제한 확장성</h3>
+                    <p>수십억 개의 벡터를 처리할 수 있는 확장 가능한 아키텍처. 비즈니스 성장과 함께 확장됩니다.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-value">10B+</span>
+                        <span class="metric-label">벡터 처리 규모</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>정확도 향상</h3>
+                    <p>최신 컨텍스트를 실시간으로 검색하여 AI 응답의 정확도와 관련성을 극대화합니다.</p>
+                    <div class="benefit-metric">
+                        <span class="metric-value">95%+</span>
+                        <span class="metric-label">정확도</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="rr-usecases" id="use-cases">
+        <div class="container">
+            <h2>사용 사례</h2>
+            <p class="section-subtitle">다양한 산업 분야에서 Rapid-RAG의 가치를 실현하세요</p>
+
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>대규모 문서 검색 시스템</h3>
+                    <p>수백만 건의 문서를 실시간으로 검색하고 관련 정보를 즉시 제공합니다.</p>
+                    <ul class="usecase-features">
+                        <li><i class="fas fa-check"></i> 법률 문서 검색</li>
+                        <li><i class="fas fa-check"></i> 특허 분석</li>
+                        <li><i class="fas fa-check"></i> 학술 논문 검색</li>
+                        <li><i class="fas fa-check"></i> 규정 준수 문서 관리</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>실시간 고객 지원 AI</h3>
+                    <p>고객 문의에 정확하고 빠른 답변을 제공하는 지능형 챗봇을 구축합니다.</p>
+                    <ul class="usecase-features">
+                        <li><i class="fas fa-check"></i> 24/7 고객 상담</li>
+                        <li><i class="fas fa-check"></i> 다국어 지원</li>
+                        <li><i class="fas fa-check"></i> 제품 추천</li>
+                        <li><i class="fas fa-check"></i> 문제 해결 가이드</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>엔터프라이즈 지식 관리</h3>
+                    <p>기업 내 방대한 지식을 체계적으로 관리하고 쉽게 접근할 수 있게 합니다.</p>
+                    <ul class="usecase-features">
+                        <li><i class="fas fa-check"></i> 내부 위키 검색</li>
+                        <li><i class="fas fa-check"></i> 프로젝트 문서 관리</li>
+                        <li><i class="fas fa-check"></i> 전문 지식 공유</li>
+                        <li><i class="fas fa-check"></i> 온보딩 지원</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>다국어 AI 어시스턴트</h3>
+                    <p>여러 언어로 정확한 정보를 제공하는 글로벌 AI 어시스턴트를 구축합니다.</p>
+                    <ul class="usecase-features">
+                        <li><i class="fas fa-check"></i> 실시간 번역</li>
+                        <li><i class="fas fa-check"></i> 문화적 맥락 이해</li>
+                        <li><i class="fas fa-check"></i> 글로벌 콘텐츠 검색</li>
+                        <li><i class="fas fa-check"></i> 지역화된 응답</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="rr-architecture" id="architecture">
+        <div class="container">
+            <h2>기술 아키텍처</h2>
+            <p class="section-subtitle">Rapid-RAG의 혁신적인 시스템 구조</p>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Application Layer</h3>
+                    </div>
+                    <div class="layer-components">
+                        <div class="component">
+                            <i class="fas fa-desktop"></i>
+                            <span>Web Interface</span>
+                        </div>
+                        <div class="component">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Apps</span>
+                        </div>
+                        <div class="component">
+                            <i class="fas fa-code"></i>
+                            <span>API Gateway</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Processing Layer</h3>
+                    </div>
+                    <div class="layer-components">
+                        <div class="component highlight">
+                            <i class="fas fa-brain"></i>
+                            <span>LLM Engine</span>
+                        </div>
+                        <div class="component highlight">
+                            <i class="fas fa-memory"></i>
+                            <span>KV Cache Offload</span>
+                        </div>
+                        <div class="component">
+                            <i class="fas fa-cogs"></i>
+                            <span>RAG Orchestrator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-search"></i>
+                        <h3>Retrieval Layer</h3>
+                    </div>
+                    <div class="layer-components">
+                        <div class="component highlight">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Vector Search (Zilliz)</span>
+                        </div>
+                        <div class="component highlight">
+                            <i class="fas fa-bolt"></i>
+                            <span>Index Cache Acceleration</span>
+                        </div>
+                        <div class="component">
+                            <i class="fas fa-filter"></i>
+                            <span>Query Optimizer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Storage Layer</h3>
+                    </div>
+                    <div class="layer-components">
+                        <div class="component">
+                            <i class="fas fa-hdd"></i>
+                            <span>Flash Storage</span>
+                        </div>
+                        <div class="component">
+                            <i class="fas fa-server"></i>
+                            <span>Vector Database</span>
+                        </div>
+                        <div class="component">
+                            <i class="fas fa-archive"></i>
+                            <span>Document Store</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-footer">
+                    <div class="powered-by">
+                        <i class="fas fa-bolt"></i>
+                        <span>Powered by <strong>Pliops LightningAI</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Features -->
+            <div class="arch-features">
+                <div class="arch-feature">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>보안 및 프라이버시</h4>
+                    <p>엔터프라이즈급 보안으로 데이터를 보호합니다</p>
+                </div>
+                <div class="arch-feature">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h4>실시간 동기화</h4>
+                    <p>데이터 변경 사항을 즉시 반영합니다</p>
+                </div>
+                <div class="arch-feature">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>확장 가능한 구조</h4>
+                    <p>비즈니스 성장에 따라 유연하게 확장됩니다</p>
+                </div>
+                <div class="arch-feature">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h4>쉬운 통합</h4>
+                    <p>기존 시스템과 간편하게 연동됩니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section-compact">
+        <div class="container">
+            <div class="contact-compact-content">
+                <h2>문의하기</h2>
+                <p>시작할 준비가 되셨나요? 지금 바로 연락주세요.</p>
+                <a href="/contact-us/" class="btn-primary">
+                    문의하기 <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container">
+      <p>&copy; 2026 DataSpeak's Home. 모든 권리 보유.</p>
+    </div>
+  </footer>
+</body>
+</html>

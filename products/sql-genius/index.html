@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SQL Genius - DataSpeak's Home</title>
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/rapid-rag.css">
+  <script defer src="/assets/rapid-rag.js"></script>
+</head>
+<body class="page static-site">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/DataSpeak-logo.svg" alt="DataSpeak Logo" class="logo-image">
+          <span class="logo-text">DataSpeak Inc.</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+<li class="menu-item"><a href="/products/lightning-ai/">Pliops</a></li>
+<li class="menu-item"><a href="/products/agent-madang/">Agent Madang</a></li>
+<li class="menu-item"><a href="/products/sql-genius/">SQL Genius</a></li>
+<li class="menu-item"><a href="/products/rapid-rag/">Rapid-RAG</a></li>
+<li class="menu-item"><a href="/contact-us/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<div class="sql-genius-page">
+    <!-- Hero Section -->
+    <section class="sg-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">차세대 AI 기술로 구현</span>
+                <h1><span class="highlight">자연어</span>로 <span class="highlight">데이터베이스</span>를 대화하세요</h1>
+                <p class="hero-subtitle">SQL 지식 없이도 복잡한 데이터 분석이 가능한 혁신적인 Text-to-SQL AI 솔루션.<br>95% 정확도로 자연어를 SQL 쿼리로 변환합니다.</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn-primary">무료 데모 체험</a>
+                    <a href="#solutions" class="btn-secondary">솔루션 알아보기</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-value">95%</span>
+                        <span class="stat-label">쿼리 정확도</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">3초</span>
+                        <span class="stat-label">평균 응답시간</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">50+</span>
+                        <span class="stat-label">기업 도입</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-demo">
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <span class="demo-icon">🔍</span>
+                        <span class="demo-title">SQL 생성기</span>
+                    </div>
+                    <div class="demo-question">
+                        <span class="label">사용자 질문:</span>
+                        <p>"지난 분기 매출이 가장 높은 상위 10개 제품을 보여주세요"</p>
+                    </div>
+                    <div class="demo-result">
+                        <span class="label">생성된 SQL:</span>
+                        <pre><code><span class="keyword">SELECT</span> product_name, <span class="function">SUM</span>(revenue)
+<span class="keyword">FROM</span> sales s <span class="keyword">JOIN</span> products p
+<span class="keyword">WHERE</span> s.date >= <span class="string">'2024-01-01'</span>
+<span class="keyword">ORDER BY</span> <span class="function">SUM</span>(revenue) <span class="keyword">DESC</span>
+<span class="keyword">LIMIT</span> <span class="number">10</span>;</code></pre>
+                    </div>
+                    <div class="demo-footer">
+                        <span class="status-badge success">✓ 실시간 처리</span>
+                        <span class="status-badge verified">✓ AI 검증 완료</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="sg-solutions" id="solutions">
+        <div class="container">
+            <h2>업종별 맞춤 솔루션</h2>
+            <p class="section-subtitle">각 산업의 특성에 맞춘 전문화된 Text-to-SQL 솔루션으로 데이터 분석의 새로운 패러다임을 제시합니다.</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card healthcare">
+                    <div class="solution-icon">🏥</div>
+                    <h3>헬스케어 (MedSQL)</h3>
+                    <p>HIPAA 준수 보안으로 환자 데이터를 안전하게 분석하고, 의료 용어에 특화된 자연어 처리로 정확한 쿼리를 생성합니다.</p>
+                    <ul>
+                        <li>EHR 시스템 통합</li>
+                        <li>의료 용어 특화 처리</li>
+                        <li>규제 준수 보안</li>
+                    </ul>
+                    <div class="solution-price">병원당 연간 50만-200만원</div>
+                </div>
+                
+                <div class="solution-card finance">
+                    <div class="solution-icon">🏦</div>
+                    <h3>금융 (FinSQL)</h3>
+                    <p>실시간 리스크 모니터링과 규제 리포팅 자동화로 금융 기관의 데이터 분석 효율성을 극대화합니다.</p>
+                    <ul>
+                        <li>실시간 리스크 분석</li>
+                        <li>규제 리포팅 자동화</li>
+                        <li>프라이빗 클라우드 지원</li>
+                    </ul>
+                    <div class="solution-price">기관당 연간 100만-500만원</div>
+                </div>
+                
+                <div class="solution-card education">
+                    <div class="solution-icon">🎓</div>
+                    <h3>교육 (EduSQL)</h3>
+                    <p>학습 분석과 성과 추적을 통해 개인맞춤형 교육을 지원하고, 교육 기관의 데이터 기반 의사결정을 돕습니다.</p>
+                    <ul>
+                        <li>학습 분석 도구</li>
+                        <li>성과 추적 시스템</li>
+                        <li>개인정보 보호</li>
+                    </ul>
+                    <div class="solution-price">기관당 연간 10만-50만원</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Features -->
+    <section class="sg-features" id="features">
+        <div class="container">
+            <h2>혁신적인 기술 특장점</h2>
+            <p class="section-subtitle">최신 AI 기술과 깊은 도메인 전문성이 결합된 차세대 Text-to-SQL 솔루션의 핵심 기능들입니다.</p>
+            
+            <div class="features-layout">
+                <div class="features-left">
+                    <h3>🚀 첨단 AI 기술</h3>
+                    
+                    <div class="feature-item">
+                        <h4>멀티 LLM 앙상블</h4>
+                        <p>GPT-4o, Claude 3.5, Llama 3.3 등 최신 모델들의 조합으로 최고 정확도 달성</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>지능형 스키마 링킹</h4>
+                        <p>복잡한 데이터베이스 구조를 자동으로 분석하고 최적의 테이블 관계를 식별</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>자체 검증 시스템</h4>
+                        <p>AI 에이전트가 생성된 SQL을 다시 한번 검증하여 오류율 최소화</p>
+                    </div>
+                </div>
+                
+                <div class="features-right">
+                    <h3>⚡ AI 처리 파이프라인</h3>
+                    
+                    <div class="pipeline">
+                        <div class="pipeline-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>자연어 분석</h4>
+                                <p>사용자 질의 의도 파악 및 키워드 추출</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>스키마 매핑</h4>
+                                <p>관련 테이블 및 컬럼 자동 식별</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>SQL 생성</h4>
+                                <p>최적화된 쿼리 구문 작성</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>검증 및 실행</h4>
+                                <p>문법 검사 및 성능 최적화</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Specs -->
+            <div class="tech-specs">
+                <div class="spec-card">
+                    <span class="spec-value">95%</span>
+                    <span class="spec-label">쿼리 정확도</span>
+                    <span class="spec-note">업계 최고 수준</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-value">3초</span>
+                    <span class="spec-label">평균 응답시간</span>
+                    <span class="spec-note">실시간 처리</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-value">15+</span>
+                    <span class="spec-label">지원 데이터베이스</span>
+                    <span class="spec-note">SQL & NoSQL</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-value">한국어</span>
+                    <span class="spec-label">특화 처리</span>
+                    <span class="spec-note">국내 최초</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Opportunity -->
+    <section class="sg-market">
+        <div class="container">
+            <h2>시장 기회와 성장 잠재력</h2>
+            
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="market-icon">📈</div>
+                    <h4>급성장하는 AI 시장</h4>
+                    <p>2025년 AI 시장 규모 $757억 → 2034년 $3.68조 예상 (연평균 성장률 22%)</p>
+                </div>
+                
+                <div class="market-card">
+                    <div class="market-icon">👥</div>
+                    <h4>데이터 민주화 트렌드</h4>
+                    <p>비개발자도 데이터에 접근할 수 있는 솔루션에 대한 수요 급증</p>
+                </div>
+                
+                <div class="market-card">
+                    <div class="market-icon">🏆</div>
+                    <h4>선도적 포지셔닝</h4>
+                    <p>한국 시장 Text-to-SQL 분야 퍼스트 무버로서 경쟁 우위 확보</p>
+                </div>
+            </div>
+            
+            <div class="market-cta">
+                <a href="#demo" class="btn-outline">상세 사업 모델 보기 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="sg-cta" id="demo">
+        <div class="container">
+            <h2>데이터베이스와 대화하는 새로운 경험을 시작하세요</h2>
+            <p class="section-subtitle">무료 데모를 통해 SQLGenius의 혁신적인 기술을 직접 체험해보세요. 5분이면 충분합니다.</p>
+            
+            <div class="cta-buttons">
+                <a href="/contact-us/" class="btn-primary">무료 데모 신청</a>
+                <a href="#top" class="btn-secondary">투자 제안서 보기</a>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container">
+      <p>&copy; 2026 DataSpeak's Home. 모든 권리 보유.</p>
+    </div>
+  </footer>
+</body>
+</html>

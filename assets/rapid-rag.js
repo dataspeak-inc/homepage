@@ -4,12 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS (Animate On Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out',
-        once: true,
-        offset: 100
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+        });
+    }
     
     // Initialize all components (navbar functions disabled for WordPress)
     // initNavbar(); // WordPress uses its own navigation
@@ -140,41 +142,33 @@ function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                company: document.getElementById('company').value,
-                phone: document.getElementById('phone').value,
-                interest: document.getElementById('interest').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
-            };
-            
-            // Show loading state
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 전송 중...';
+            submitBtn.innerHTML = '전송 중...';
             submitBtn.disabled = true;
-            
-            // Simulate form submission (in production, this would send to a server)
-            setTimeout(() => {
-                // Show success message
-                showNotification('문의가 성공적으로 전송되었습니다! 빠른 시일 내에 연락드리겠습니다.', 'success');
-                
-                // Reset form
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method || 'POST',
+                    body: new URLSearchParams(new FormData(contactForm))
+                });
+                const result = await response.json();
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.error || '문의 전송 중 오류가 발생했습니다.');
+                }
+
+                showNotification('문의가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다.', 'success');
                 contactForm.reset();
-                
-                // Restore button
+            } catch (error) {
+                showNotification(error.message || '문의 전송 중 오류가 발생했습니다.', 'error');
+            } finally {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-                
-                // Log to console (for demo purposes)
-                console.log('Form submitted:', formData);
-            }, 1500);
+            }
         });
     }
 }
@@ -187,9 +181,10 @@ function showNotification(message, type = 'info') {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
+    const label = type === 'success' ? '완료' : type === 'error' ? '오류' : '안내';
     notification.innerHTML = `
         <div class="notification-content">
-            <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+            <strong>${label}</strong>
             <span>${message}</span>
         </div>
     `;
@@ -216,6 +211,10 @@ function showNotification(message, type = 'info') {
             .notification-success {
                 border-color: rgba(16, 185, 129, 0.5);
             }
+
+            .notification-error {
+                border-color: rgba(239, 68, 68, 0.5);
+            }
             
             .notification-content {
                 display: flex;
@@ -224,9 +223,12 @@ function showNotification(message, type = 'info') {
                 color: #f8fafc;
             }
             
-            .notification-success i {
+            .notification-success strong {
                 color: #10b981;
-                font-size: 1.5rem;
+            }
+
+            .notification-error strong {
+                color: #ef4444;
             }
             
             @keyframes slideIn {

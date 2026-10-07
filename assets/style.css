@@ -74,9 +74,9 @@ header .container {
 }
 
 .logo-image {
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
+    width: 200px;
+    max-width: 35vw;
+    height: auto;
     vertical-align: middle;
 }
 

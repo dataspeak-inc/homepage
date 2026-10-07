@@ -1,6 +1,6 @@
-# DataSpeak static site
+# LinkStack static site
 
-This directory is generated from the WordPress theme templates in `wp_data/wp-content/themes/dataspeak-theme`.
+This directory is generated from the WordPress theme templates in `wp_data/wp-content/themes/linkstack-theme`.
 
 ## Pages
 
